@@ -20,11 +20,8 @@ After completing the exercises in this lab, you will be able to:
 
 -   Use PowerShell Desired State Configuration (DSC) to apply internal configuration for a virtual machine.
 
--   Use Chef to apply internal configuration for a virtual machine.
 
--   Use Puppet to apply internal configuration for a virtual machine.
-
-**Estimated time to complete this lab: *60* minutes**
+**Estimated time to complete this lab: *120* minutes**
 
 # Exercise : Create an ARM template to provision a virtual machine
 
@@ -79,6 +76,28 @@ After completing this exercise, you will understand:
     - Click **Add**.
 
     ![image](./media/image5.png)
+
+1. Deploy storage account from Visual Studio to Azure.
+
+    - Log into the Azure Portal and check the resource has been created
+
+    - In the Azure Portal, add a container to the storage and upload *any* file
+
+1. In the JSON template, add a **Tag** key/value pair to the storage account
+
+    - Re-deploy to Azure
+
+    - Check in the Azure portal that the tag has been applied to the existing resource
+
+1. In the JSON template, add a **Parameter** to represent the project name.
+
+    - Add another **Tag** key/value pair to the storage account to reference the project name
+
+    - Change the storage account name to be the Project Prefix and then the existing storage account
+
+    - Re-deploy to Azure
+
+    - Inspect the resources in the **Resource Group**, see that another storage account has been created.  The name of the storage account is unsed to uniquely reference it.
 
 1. In the **JSON Outline** window, right-click **Resources** and select **Add New Resource**.
 
