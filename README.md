@@ -101,11 +101,13 @@ After completing this exercise, you will understand:
 
 1. In the **JSON Outline** window, right-click **Resources** and select **Add New Resource**.
 
-1. In the **Add Resource** window, select **Storage Account**.
+1. In the **Add Resource** window, select **Virtual Network**.
 
     - Set the resource **Name** to *vnet*.
 
     - Click **Add**.
+
+    - Proceed to re-deploy this to Azure
 
     ![image](./media/image6.png)
 
