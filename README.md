@@ -165,40 +165,6 @@ After completing this exercise, you will understand:
 
 1. Change the **dnsSettings.domainNameLabel** property for the **Public IP Address** to reference the **vmpipDnsName** variable.
 
-    ```json
-    {
-
-        "name": "\[variables('vmpipName')\]",
-
-        "type": "Microsoft.Network/publicIPAddresses",
-
-        "location": "\[resourceGroup().location\]",
-
-        "apiVersion": "2015-06-15",
-
-        "dependsOn": \[ \],
-
-        "tags": {
-
-            "displayName": "vmpip"
-
-        },
-
-        "properties": {
-
-            "publicIPAllocationMethod": "Dynamic",
-
-            "dnsSettings": {
-
-                "domainNameLabel": "\[variables('vmpipDnsName')\]"
-
-            }
-
-        }
-
-    }
-    ```
-
 1. Press **Ctrl-S** to save the changes.
 
 1. In the **JSON Outline** window, right-click **Resources** and select **Add New Resource**.
@@ -217,46 +183,6 @@ After completing this exercise, you will understand:
 
     - Replace the contents of **dsc.ps1** with the following code 
     https://github.com/Gordonby/DevOps-Deep-Dive/blob/master/scripts/dsc.ps1.
-
-   
-
-1. Press **Ctrl-S** to save the changes.
-
-1. In **Solution Explorer**, double-click **azuredeploy.parameters.json**.
-
-    - Replace the parameters section with the highlighted code.
-
-    ```json
-    {
-
-        "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json\#",
-
-        "contentVersion": "1.0.0.0",
-
-        "parameters": {
-
-            "vmName": {
-
-                "value": "iisvm"
-
-            },
-
-            "vmAdminUserName": {
-
-                "value": "adminuser"
-
-            },
-
-            "vmAdminPassword": {
-
-                "value": "TechReady23!"
-
-            }
-
-        }
-
-    }
-    ```
 
 1. Press **Ctrl-S** to save the changes.
 
