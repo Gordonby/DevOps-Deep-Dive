@@ -83,7 +83,11 @@ After completing this exercise, you will understand:
 
     - In the Azure Portal, add a container to the storage and upload *any* file
 
-1. In the JSON template, add a **Tag** key/value pair to the storage account
+1. In the JSON template, add a new parameter **Owner** and then **Tag** key/value pair to the storage account
+
+    ![image](./media/Tag-Parameter.png)
+
+    ![image](./media/Tag-In-Service.png)
 
     - Re-deploy to Azure
 
@@ -91,10 +95,14 @@ After completing this exercise, you will understand:
 
 1. In the JSON template, add a **Parameter** to represent the project name.
 
+    ![image](./media/Parameter-Project-Name.png)
+
     - Add another **Tag** key/value pair to the storage account to reference the project name
 
     - Change the storage account name to be the Project Prefix and then the existing storage account
 
+    ![image](./media/Storage-ProjectName-Prefix.png)
+    
     - Re-deploy to Azure
 
     - Inspect the resources in the **Resource Group**, see that another storage account has been created.  The name of the storage account is unsed to uniquely reference it.
@@ -144,38 +152,6 @@ After completing this exercise, you will understand:
 1. In the editor window for azuredeploy.json, add a new variable called *vmpipDnsName* as shown.
 
     ```json
-    "variables": {
-
-        "stgName": "\[concat('stg', uniqueString(resourceGroup().id))\]",
-
-        "vnetPrefix": "10.0.0.0/16",
-
-        "vnetSubnet1Name": "Subnet-1",
-
-        "vnetSubnet1Prefix": "10.0.0.0/24",
-
-        "vnetSubnet2Name": "Subnet-2",
-
-        "vnetSubnet2Prefix": "10.0.1.0/24",
-
-        "vmImagePublisher": "MicrosoftWindowsServer",
-
-        "vmImageOffer": "WindowsServer",
-
-        "vmOSDiskName": "vmOSDisk",
-
-        "vmVmSize": "Standard\_D1",
-
-        "vmVnetID": "\[resourceId('Microsoft.Network/virtualNetworks', 'vnet')\]",
-
-        "vmSubnetRef": "\[concat(variables('vmVnetID'), '/subnets/', variables('vnetSubnet1Name'))\]",
-
-        "vmStorageAccountContainerName": "vhds",
-
-        "vmNicName": "\[concat(parameters('vmName'), 'NetworkInterface')\]",
-
-        "vmpipName": "vmpip",
-
         "vmpipDnsName": "\[concat(parameters('vmName'), uniqueString(resourceGroup().id))\]"
     ```
 
