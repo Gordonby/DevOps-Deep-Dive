@@ -1,3 +1,4 @@
+
 Configuration Main
 
 {
@@ -38,7 +39,7 @@ Configuration Main
             Ensure = "Present"
             Path = "C:\WindowsAzure\WebDeploy_amd64_en-US.msi"
             Name = "Microsoft Web Deploy 3.6"
-            ProductId = "{ED4CC1E5-043E-4157-8452-B5E533FE2BA1}"
+            ProductId = "{6773A61D-755B-4F74-95CC-97920E45E696}"
             Arguments = "ADDLOCAL=ALL"
             DependsOn = "[Script]DownloadWebDeploy"
         }
